@@ -5,6 +5,8 @@ import App from './App.jsx'
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
 import { initSmoothScroll } from "./utils/SmoothScroll.js";
+import { Analytics } from "@vercel/analytics/react";
+
 
 initSmoothScroll();
 
@@ -12,5 +14,6 @@ initSmoothScroll();
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
+     <Analytics />
   </StrictMode>,
 )
