@@ -76,14 +76,12 @@ const Footer = () => {
               >
                 GitHub
               </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/resume"
                 className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 Resume
-              </a>
+              </Link>
             </div>
           </div>
         </div>

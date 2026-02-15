@@ -123,14 +123,12 @@ const Navbar = () => {
 
 // Sub-components for cleaner code
 const ResumeButton = () => (
-  <a
-    href="/resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
+  <Link
+    to="/resume"
     className="px-6 py-2 border border-current rounded-full text-[10px] uppercase tracking-[0.2em] font-bold transition-all hover:bg-current hover:text-[var(--bg)]"
   >
     Resume
-  </a>
+  </Link>
 );
 
 const ThemeToggle = ({ theme, toggleTheme }) => (
