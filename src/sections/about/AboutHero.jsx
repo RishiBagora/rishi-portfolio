@@ -48,17 +48,7 @@ const AboutHero = () => {
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center pt-32 pb-24 bg-transparent overflow-hidden">
       
-      {/* --- BLUEPRINT GRID OVERLAY --- */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div 
-          className="absolute inset-0 opacity-[0.05]" 
-          style={{
-            backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
-            backgroundSize: '40px 40px',
-            maskImage: 'radial-gradient(circle at center, black, transparent 80%)',
-          }}
-        />
-      </div>
+     
 
       {/* Large Decorative Parallax Text */}
       <div className="bg-parallax absolute right-[-5%] top-1/4 select-none pointer-events-none hidden lg:block">

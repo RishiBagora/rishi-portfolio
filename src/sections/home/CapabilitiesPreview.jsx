@@ -8,41 +8,39 @@ const capabilities = [
   {
     id: "01",
     title: "Web Development",
-    tags: ["React", "Framer", "GSAP"],
-    description:
-      "High-performance, scalable frontend systems built with modern architecture and clean code principles."
+    skills: ["React", "Framer", "GSAP", "Tailwind CSS", "Responsive UI"]
   },
   {
     id: "02",
     title: "UI Designs",
-    tags: ["Framer", "Figma", "Tailwind"],
-    description:
-      "Pixel-perfect interfaces with motion clarity, refined spacing, and thoughtful interaction design."
+    skills: ["Figma", "Framer", "Tailwind", "Design Systems", "Prototyping"]
   },
-
-
-
   {
     id: "03",
-    title: "AI Tools",
-    tags: ["Image Generation", "Content Writing", "Automation"],
-    description:
-      "Core Web Vitals focused builds ensuring speed, accessibility, and real-world user performance."
+    title: "Tools & Software",
+    skills: ["VS Code", "AntiGravity", "Git & GitHub", "Prototyping"]
   },
   {
     id: "04",
-    title: "Performance",
-    tags: ["Vitals", "SEO", "Speed"],
-    description:
-      "Core Web Vitals focused builds ensuring speed, accessibility, and real-world user performance."
+    title: "AI Tools",
+    skills: ["Image Generation", "Content Writing", "Automation", "OpenAI"]
   },
   {
     id: "05",
+    title: "Performance",
+    skills: ["Core Web Vitals", "SEO", "Speed Optimization", "Accessibility"]
+  },
+  {
+    id: "06",
     title: "Graphic Design",
-    tags: ["Canva", "CorelDraw", "Adobe"],
-    description:
-      "Creative and impactful visual assets for branding, marketing, and digital presence."
-  }
+    skills: ["Canva", "CorelDraw", "Adobe Suite", "Brand Assets"]
+  },
+  {
+    id: "07",
+    title: "CS Subjects",
+    skills: ["Data Structures", "Algorithms", "Database Systems", "Operating Systems", "Computer Networks"]
+  },
+
 ];
 
 const CapabilitiesPreview = () => {
@@ -53,41 +51,39 @@ const CapabilitiesPreview = () => {
       const lines = gsap.utils.toArray(".capability-line");
       const items = gsap.utils.toArray(".capability-item");
 
-      // Line animation (GPU optimized)
       gsap.fromTo(
-  lines,
-  { scaleX: 0 },
-  {
-    scaleX: 1,
-    transformOrigin: "left center",
-    duration: 1.2,
-    ease: "power4.out",
-    stagger: 0.15,
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top 80%",
-      once: true
-    }
-  }
-);
+        lines,
+        { scaleX: 0 },
+        {
+          scaleX: 1,
+          transformOrigin: "left center",
+          duration: 1.2,
+          ease: "power4.out",
+          stagger: 0.15,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 80%",
+            once: true
+          }
+        }
+      );
 
-// Item animation
-gsap.fromTo(
-  items,
-  { y: 40, opacity: 0 },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 1,
-    ease: "power3.out",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: containerRef.current,
-      start: "top 75%",
-      once: true
-    }
-  }
-);
+      gsap.fromTo(
+        items,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.1,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 75%",
+            once: true
+          }
+        }
+      );
 
       ScrollTrigger.refresh();
     }, containerRef);
@@ -96,10 +92,7 @@ gsap.fromTo(
   }, []);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative py-24 md:py-40 transition-colors duration-500"
-    >
+    <section ref={containerRef} className="relative py-24 md:py-40">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
 
         {/* Header */}
@@ -123,32 +116,17 @@ gsap.fromTo(
           {capabilities.map((item) => (
             <div
               key={item.id}
-              className="capability-item group relative py-10 md:py-16 transition-all duration-500 hover:px-4 md:hover:px-8 overflow-hidden"
+              className="capability-item group relative py-12 md:py-16 transition-all duration-500 hover:px-4 md:hover:px-8 overflow-hidden"
             >
-              {/* Hover Background */}
-              <div className="absolute inset-0 bg-black/5 dark:bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out -z-10" />
-
-              {/* Animated Line */}
               <div className="capability-line absolute top-0 left-0 h-[1px] bg-current/20 w-full" />
 
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start relative z-10">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-center">
 
-                {/* ID & Tags */}
-                <div className="md:col-span-2 flex flex-row md:flex-col justify-between md:justify-start gap-4">
+                {/* ID */}
+                <div className="md:col-span-2">
                   <span className="text-sm font-mono opacity-30 group-hover:opacity-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-all duration-300">
                     {item.id}
                   </span>
-
-                  <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-[10px] uppercase tracking-tighter px-2 py-1 border border-current/20 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-400"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                 </div>
 
                 {/* Title */}
@@ -158,11 +136,18 @@ gsap.fromTo(
                   </h3>
                 </div>
 
-                {/* Description */}
+                {/* Skills instead of description */}
                 <div className="md:col-span-5">
-                  <p className="text-base md:text-lg leading-relaxed opacity-60 group-hover:opacity-90 transition-opacity duration-500 max-w-[480px]">
-                    {item.description}
-                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    {item.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-sm md:text-base px-3 py-1 border border-current/20 rounded-full opacity-70 hover:opacity-100 transition-opacity"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
               </div>
