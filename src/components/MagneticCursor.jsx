@@ -80,14 +80,14 @@ const MagneticCursor = () => {
       {/* Outer Ring */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 w-10 h-10 border border-current mix-blend-difference rounded-full pointer-events-none z-[9999]"
+        className="hidden md:block fixed top-0 left-0 w-10 h-10 border border-current mix-blend-difference rounded-full pointer-events-none z-[9999]"
         style={{ transform: "translate(-50%, -50%)" }}
       />
 
       {/* Inner Dot */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-2 h-2 bg-current mix-blend-difference rounded-full pointer-events-none z-[9999]"
+        className="hidden md:block fixed top-0 left-0 w-2 h-2 bg-current mix-blend-difference rounded-full pointer-events-none z-[9999]"
         style={{ transform: "translate(-50%, -50%)" }}
       />
     </>
