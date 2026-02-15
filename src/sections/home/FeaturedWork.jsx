@@ -10,7 +10,7 @@ const projects = [
     category: "Agency Website",
     year: "2026",
     image:
-      "public/images/arcomockup.png",
+      "/images/arcomockup.png",
       url:"https://arcocreativestudio.vercel.app"
 
   },
@@ -20,7 +20,7 @@ const projects = [
     category: "(Under Developement)  Hotel Website",
     year: "2025",
     image:
-      "public/images/bhaktimockup.png",
+      "/images/bhaktimockup.png",
       url:"https://hotelbhaktipalace.vercel.app"
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     category: "Practice Project",
     year: "2025",
     image:
-      "public/images/notepadmockup.png",
+      "/images/notepadmockup.png",
       url:"https://dulcet-centaur-a59b7b.netlify.app/"
   },
 ];
