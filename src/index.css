@@ -1,0 +1,42 @@
+@import "tailwindcss";
+:root {
+  --bg: #f8f8f8;
+  --text: #111111;
+  --grid: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+  --bg: #0e0e0e;
+  --text: #f1f1f1;
+  --grid: rgba(255, 255, 255, 0.05);
+}
+
+/* Apply globally */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s ease, color 0.4s ease;
+  font-family: "Inter", sans-serif;
+}
+body {
+  cursor: none;
+}
+
+::selection {
+  background: #ff4d00;
+  color: white;
+}
+
+
+input, textarea {
+  padding-left: 1.5rem;
+}
+
+nav {
+  backdrop-filter: blur(10px);
+}
+
