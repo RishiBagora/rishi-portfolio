@@ -6,21 +6,21 @@ const projects = [
     title: "Arco Creative Studio",
     category: "Agency Website",
     year: "2026",
-    image: "public/images/arcomockup.png",
+    image: "/images/arcomockup.png",
     url:"https://arcocreativestudio.vercel.app"
   },
   {
     title: "Hotel Bhakti",
     category: "Under Development",
     year: "2025",
-    image: "public/images/bhaktimockup.png",
+    image: "/images/bhaktimockup.png",
     url:"https://hotelbhaktipalace.vercel.app"
   },
   {
     title: "Note Pad",
     category: "Practice Project",
     year: "2025",
-    image: "public/images/notepadmockup.png",
+    image: "/images/notepadmockup.png",
     url:"https://dulcet-centaur-a59b7b.netlify.app/"
   }
 ];
